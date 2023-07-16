@@ -16,11 +16,18 @@ const App = () => {
     useEffect(() => {
         searchMovies("Godfather");
       }, []);
-
+/*
     const searchMovies = async (title) => {
         const response = await fetch(`${API_URL}&s=${title}`);
         const data = await response.json();
         setMovies(data.Search);
+    }
+*/
+     const searchMovies = async (title) => {
+        fetch(`${API_URL}&s=${title}`)
+        .then((res)=>{
+            setMovies(res.Search);
+        })
     }
 
     
