@@ -16,18 +16,11 @@ const App = () => {
     useEffect(() => {
         searchMovies("Godfather");
       }, []);
-/*
+
     const searchMovies = async (title) => {
-        const response = await fetch(`${API_URL}&s=${title}`);
+        const response = await fetch(`http://www.omdbapi.com/?apikey=aff87530&&s=${title}`);
         const data = await response.json();
         setMovies(data.Search);
-    }
-*/
-     const searchMovies = async (title) => {
-        fetch(`${API_URL}&s=${title}`)
-        .then((res)=>{
-            setMovies(res.Search);
-        })
     }
 
     
