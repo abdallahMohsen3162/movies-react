@@ -13,9 +13,10 @@ const App = () => {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
 
-  /*  useEffect(() => {
+    useEffect(() => {
         searchMovies("Godfather");
-      }, []);*/
+        console.log(movies);
+      }, []);
 
     const searchMovies = async (title) => {
         const response = await fetch(`http://www.omdbapi.com/?apikey=aff87530&&s=${title}`);
