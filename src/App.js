@@ -22,6 +22,7 @@ const App = () => {
         const response = await fetch(`http://www.omdbapi.com/?apikey=aff87530&&s=${title}`);
         const data = await response.json();
         setMovies(data.Search);
+        console.log(movies);
     }
 
     
